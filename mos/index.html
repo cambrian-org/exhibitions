@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Signs of Vision | Museum of Science</title>
+  <link href="https://fonts.cdnfonts.com/css/linux-biolinum" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../images/eye-favicon.png" type="image/png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="primary-header">
+        <div class="site-title">
+          <a href="#" class="site-logo" style="font-weight: 900; font-size: 1.5rem;">First Signs of Vision at Museum of
+            Science Boston</a>
+        </div>
+        <div class="header-links">
+          <a href="https://www.mos.org/visit">Visit</a>
+          <a href="https://www.mos.org/visit/exhibits">Exhibitions</a>
+          <a href="http://eyes.mit.edu">Project Website</a>
+          <a href="https://tickets.mos.org/events">Tickets</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="welcome-container">
+        <div class="welcome-content">
+          <h1>Welcome to First Signs of Vision</h1>
+          <p>Experience the dawn of sight at the Museum of Science. </p>
+        </div>
+        <div class="museum-info">
+          <p>The exhibition is open 1:00 p.m.– 4:00 p.m. on Wednesday, April 2, 2025.</p>
+          <a href="https://www.mos.org/visit" class="cta-button">Plan your visit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exhibition Content -->
+    <section class="exhibition-section">
+      <div class="exhibition-container">
+        <div class="exhibition-header">
+          <h2>About the Exhibition</h2>
+          <div class="navigation-arrows">
+            <button class="arrow-prev">←</button>
+            <button class="arrow-next">→</button>
+          </div>
+        </div>
+        <div class="exhibition-content">
+          <div class="exhibition-text">
+            <p class="large-text">First Signs of Vision is an interactive exhibit that lets you experience the history
+              of vision from the first light-sensitive cells to modern vision. You start the journey 540 million years
+              ago as a bacteria and can choose your own evolutionary path to vision found in present day animals.</p>
+            </p>
+          </div>
+          <div class="collaboration">
+            <p>A collaboration between:</p>
+            <div class="collaboration-logos">
+              <img src="../images/mos.jpg" alt="Museum of Science" class="collab-logo">
+              <span class="collab-x">X</span>
+              <img src="../images/mas.webp" alt="MIT Media Lab" class="collab-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="exhibition-section">
+      <a href="https://drive.google.com/file/d/1ubJvHEtROJ6Px7tNIu0O5Fx-QwphrQRM/view?usp=sharing"
+        class="download-btn">Download
+        App</a>
+    </section>
+
+    <!-- Content Section
+      <section id="content" class="content-section">
+        <div class="content-container">
+          <div class="content-header">
+            <h2>Choose Your Evolutionary Path</h2>
+          </div>
+          <div class="content-body">
+            <div class="video-container">
+              <video autoplay loop muted playsinline class="feature-video">
+                <source src="videos/hero-movie.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <div class="research-link">
+              <a href="http://eyes.mit.edu" class="cta-button">Check out the research</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main> -->
+
+    <!-- Flyer Section -->
+    <section>
+      <img src="../images/MOS.png" width="100%">
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <video autoplay loop muted playsinline class="hero-video">
+          <source src="../videos/firstsignsofvision_hero_vid.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content" style="text-align: center;">
+          <h1 style="font-weight: bold; font-size: x-large; width: 100%;">Experience the first signs of vision...</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-logos">
+          <img src="images/cc.png" alt="Camera Culture Group" class="footer-logo" style="width: 150px; height: auto;">
+          <img src="images/mas.webp" alt="MIT Media Lab" class="footer-logo">
+        </div>
+        <div class="footer-credits">
+          <p>A collaboration between the Camera Culture Group at MIT Media Lab and the Museum of Science, Boston</p>
+          <p>&copy; 2025 All rights reserved Camera Culture Group</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for scrolling behavior
+      document.addEventListener('scroll', function () {
+        const scrollPos = window.scrollY;
+        const header = document.querySelector('.hero-section');
+
+        if (scrollPos > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Handle "Press 1 to start" functionality
+      document.addEventListener('keydown', function (e) {
+        if (e.key === '1') {
+          document.querySelector('#content').scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    </script>
+</body>
+
+</html>

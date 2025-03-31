@@ -1,436 +1,514 @@
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #000;
-  --secondary-color: #333;
-  --text-color: #333;
-  --text-light: #fff;
-  --background-light: #f8f8f8;
-  --background-gray: #f2f2f2;
-  --accent-color: #0095da;
-  --border-color: #e5e5e5;
-}
-
+/* Global Styles */
 body {
-  font-family: 'Linux Biolinum', sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-  background-color: #fff;
-  overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: normal;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Header Styles */
-.site-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 100;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.header-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.primary-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.site-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.site-logo {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-.header-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.header-links a {
-  color: var(--text-color);
-  font-size: 1rem;
-}
-
-.header-links a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero-section {
-  width: 75%;
-  max-width: 1400px;
-  margin: 5rem auto 0;
-  background-color: var(--background-gray);
-}
-
-.hero-container {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  /* 16:9 Aspect Ratio */
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Welcome Section */
-.welcome-section {
-  width: 90%;
-  max-width: 1400px;
-  margin: 2rem auto;
-}
-
-.welcome-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 2rem;
-}
-
-.welcome-content h1 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  margin-bottom: 0.5rem;
-}
-
-.welcome-content p {
-  font-size: 1.2rem;
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-color);
-  margin: 1rem 0;
-}
-
-.museum-info {
-  text-align: right;
-}
-
-.museum-info p {
-  margin-bottom: 1rem;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Exhibition Section */
-.exhibition-section {
-  width: 90%;
-  max-width: 1400px;
-  margin: 2rem auto;
-}
-
-.exhibition-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.exhibition-header h2 {
-  font-size: 1.8rem;
-  font-weight: normal;
-}
-
-.navigation-arrows {
-  display: flex;
-  gap: 1rem;
-}
-
-.arrow-prev,
-.arrow-next {
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.exhibition-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.exhibition-text {
-  flex: 2;
-}
-
-.large-text {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  line-height: 1.4;
-}
-
-.collaboration {
-  flex: 1;
-  text-align: right;
-}
-
-.collaboration p {
-  margin-bottom: 1rem;
-}
-
-.collaboration-logos {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-}
-
-.collab-logo {
-  height: 100px;
-  width: auto;
-}
-
-.collab-x {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Download Button */
-.download-btn {
-  background: #02264b9d;
-  color: white;
-  padding: 14px 40px;
-  font-size: 16px;
-  border-radius: 12px;
-}
-
-.download-btn:hover {
-  background: #0056b3;
-}
-
-/* Content Section */
-.content-section {
-  padding: 6rem 0;
-  background: linear-gradient(to bottom, #e6f0ff 0%, #f0f6ff 100%);
-  margin-top: 4rem;
-}
-
-.content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.content-header {
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.content-header h2 {
-  font-size: 3rem;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-.content-body {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.video-container {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 1000px;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.feature-video {
-  width: 100%;
-  display: block;
-}
-
-.research-link {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-/* Footer Styles */
-.site-footer {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 3rem 0;
-  margin-top: 5%;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.footer-logos {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.footer-logo {
-  height: 100px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.footer-logo:hover {
-  opacity: 1;
-}
-
-.footer-credits {
-  text-align: center;
-  opacity: 0.8;
-  font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-
-  .welcome-container,
-  .exhibition-content {
-    flex-direction: column;
-    gap: 2rem;
+    font-family: 'Linux Biolinum', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f8f8;
   }
-
-  .museum-info,
-  .collaboration {
-    text-align: left;
+  
+  /* Header Styles */
+  .site-header {
+    background-color: #000;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
   }
-
-  .collaboration-logos {
-    justify-content: flex-start;
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-
-  .video-container {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
+  
   .primary-header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  .header-links {
-    gap: 1rem;
+  
+  .title-with-logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     flex-wrap: wrap;
-    justify-content: center;
   }
-
-  .welcome-content h1 {
-    font-size: 2rem;
+  
+  .header-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
   }
-
-  .exhibition-header {
+  
+  .site-logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+  
+  .header-links {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .header-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .header-links a:hover {
+    color: #a1c9f2;
+    border-bottom: 2px solid #a1c9f2;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    overflow: hidden;
+  }
+  
+  .hero-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  .hero-content p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.2s ease-out 0.2s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Intro Section */
+  .intro-section {
+    padding: 80px 0;
+    background-color: #fff;
     text-align: center;
   }
-
-  .large-text {
-    font-size: 1.2rem;
+  
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-
-  .footer-logos {
-    flex-direction: column;
-    gap: 1.5rem;
+  
+  .intro-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #222;
   }
-
-  .hero-section {
-    margin-top: 8rem;
+  
+  .intro-section p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #444;
   }
-
-  .content-header h2 {
-    font-size: 2.5rem;
+  
+  /* Exhibitions Section */
+  .exhibitions-section {
+    padding: 100px 0;
+    background-color: #f6f9fe;
   }
-}
-
-@media (max-width: 480px) {
-  .welcome-content h1 {
+  
+  .exhibitions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .exhibitions-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #222;
+  }
+  
+  .exhibitions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  
+  .exhibition-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .exhibition-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .exhibition-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .exhibit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .exhibition-card:hover .exhibit-img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 30px 20px 20px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .exhibition-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
     font-size: 1.8rem;
+    margin-bottom: 10px;
   }
-
-  .site-title {
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .view-button:hover {
+    background-color: #1b5e20;
+  }
+  
+  .exhibition-info {
+    padding: 30px;
+  }
+  
+  .exhibition-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #222;
+  }
+  
+  .exhibition-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  .exhibition-details {
+    margin: 25px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+  }
+  
+  .detail-item {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .detail-item strong {
+    display: inline-block;
+    width: 70px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .cta-button:hover {
+    background-color: #333;
+  }
+  
+  /* App Section */
+  .app-section {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+  
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .app-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  .app-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .download-button {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .download-button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .app-preview {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Creators Section */
+  .creators-section {
+    padding: 80px 0;
+    background-color: #f6f9fe;
+    text-align: center;
+  }
+  
+  .creators-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .creators-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #222;
+  }
+  
+  .team-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .team-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .creators-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .creator-link {
+    color: #9e15dd;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s, text-decoration 0.3s;
+    padding: 8px 15px;
+  }
+  
+  .creator-link:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+  
+  .creator-separator {
+    color: #666;
     font-size: 1.3rem;
   }
-
-  .header-links a {
-    font-size: 0.9rem;
+  
+  /* Footer */
+  .site-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
   }
-}
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    height: 60px;
+    width: auto;
+  }
+  
+  .footer-credits p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1100px) {
+    .exhibitions-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .app-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .app-image {
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .primary-header {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .title-with-logos {
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .header-links {
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+    }
+    
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.4rem;
+    }
+    
+    .intro-section h2,
+    .exhibitions-section h2,
+    .creators-section h2 {
+      font-size: 2.2rem;
+    }
+  
+    .exhibition-image {
+      height: 250px;
+    }
+    
+    .overlay {
+      opacity: 1;
+      padding: 20px 15px 15px;
+    }
+    
+    .footer-logos {
+      gap: 20px;
+    }
+  }
